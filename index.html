@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="new-btn">New Game</button>
+    </div>
+    <main>
+      <h1>Tic Tac Toe</h1>
+      
+      <!-- Game Controls -->
+      <div class="game-controls">
+        <div class="game-mode-section">
+          <h3>Game Mode</h3>
+          <div class="mode-options">
+            <label class="mode-option">
+              <input type="radio" name="game-mode" value="human" checked>
+              <span class="mode-label">👥 Human vs Human</span>
+            </label>
+            <label class="mode-option">
+              <input type="radio" name="game-mode" value="ai">
+              <span class="mode-label">🤖 Human vs AI</span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="blitz-section">
+          <label class="blitz-toggle">
+            <input type="checkbox" id="blitz-mode"> Enable Blitz Mode (30s per move)
+          </label>
+        </div>
+      </div>
+      
+      <div class="game-layout">
+        <!-- Timer Side Panel -->
+        <div class="timer-side-panel hide" id="timer-side-panel">
+          <div class="timer-header">
+            <h3>⏱️ Blitz Mode</h3>
+            <p>Time per move</p>
+          </div>
+          <div class="timer-display">
+            <div class="timer-circle">
+              <span class="timer-number" id="timer">30</span>
+              <span class="timer-label">seconds</span>
+            </div>
+          </div>
+          <div class="timer-status" id="timer-status">
+            <span class="current-player">Player O's Turn</span>
+          </div>
+        </div>
+        
+        <!-- Game Board -->
+        <div class="game-board-container">
+          <div class="container">
+            <div class="game">
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+            </div>
+          </div>
+          <button id="reset-btn">Reset Game</button>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Audio Elements for Sound Effects -->
+    <audio id="move-sound" preload="auto">
+      <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+    <audio id="win-sound" preload="auto">
+      <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+    <audio id="draw-sound" preload="auto">
+      <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

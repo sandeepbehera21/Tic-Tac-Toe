@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #A0D2EB 0%, #E5EAF5 25%, #D0BDF4 50%, #8458B3 75%, #494D5F 100%);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  background: linear-gradient(45deg, #A0D2EB, #D0BDF4, #8458B3, #494D5F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: bold;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Game Controls Styles */
+.game-controls {
+  margin: 2rem auto;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+}
+
+.game-mode-section, .blitz-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.game-mode-section:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.mode-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mode-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.mode-option:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.mode-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.mode-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.blitz-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.blitz-toggle:hover {
+  background-color: #e9ecef;
+}
+
+.blitz-toggle input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Game Layout */
+.game-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Timer Side Panel */
+.timer-side-panel {
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  min-width: 250px;
+  position: sticky;
+  top: 2rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.timer-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timer-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ecf0f1;
+}
+
+.timer-header p {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+  opacity: 0.8;
+}
+
+.timer-display {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timer-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e74c3c, #c0392b);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+  border: 4px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.timer-circle.warning {
+  background: linear-gradient(145deg, #f39c12, #e67e22);
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+  animation: pulse 1s infinite;
+}
+
+.timer-circle.danger {
+  background: linear-gradient(145deg, #e74c3c, #c0392b);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+  animation: pulse 0.5s infinite;
+}
+
+.timer-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  margin-top: 0.5rem;
+}
+
+.timer-status {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.current-player {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+/* Game Board Container */
+.game-board-container {
+  flex: 1;
+  max-width: 600px;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #b0413e;
+  background: linear-gradient(145deg, #ffffc7, #f0f0a0);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+/* Player X styling - Ice Cold Blue to complement the background */
+.box.player-x {
+  color: #ffffff;
+  background: linear-gradient(145deg, #A0D2EB, #E5EAF5);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 0 1rem rgba(160, 210, 235, 0.6);
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* Player O styling - Purple Pain to complement the background */
+.box.player-o {
+  color: #ffffff;
+  background: linear-gradient(145deg, #8458B3, #494D5F);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 0 1rem rgba(132, 88, 179, 0.6);
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+}
+
+.box.player-x:hover {
+  box-shadow: 0 0 2rem rgba(160, 210, 235, 0.8);
+  transform: scale(1.05);
+}
+
+.box.player-o:hover {
+  box-shadow: 0 0 2rem rgba(132, 88, 179, 0.8);
+  transform: scale(1.05);
+}
+
+.box:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.box.winning {
+  background: linear-gradient(145deg, #D0BDF4, #8458B3);
+  animation: winner 0.6s ease-in-out;
+  border: 3px solid rgba(255,255,255,0.5);
+  box-shadow: 0 0 2rem rgba(208, 189, 244, 0.8);
+}
+
+@keyframes winner {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#reset-btn {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+#reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#new-btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+#new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .game-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .timer-side-panel {
+    position: static;
+    min-width: 300px;
+    order: -1;
+  }
+  
+  .timer-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .timer-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .game-controls {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .mode-options {
+    gap: 0.5rem;
+  }
+  
+  .mode-option {
+    padding: 0.8rem;
+  }
+  
+  .mode-label {
+    font-size: 1rem;
+  }
+  
+  .blitz-toggle {
+    font-size: 1rem;
+  }
+  
+  .timer-side-panel {
+    min-width: 250px;
+    padding: 1.5rem;
+  }
+  
+  .timer-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .timer-number {
+    font-size: 2rem;
+  }
+  
+  .game-layout {
+    padding: 0 1rem;
+  }
+}
