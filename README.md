@@ -99,7 +99,7 @@ Contributions welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Contact
 
-- **Project Link**: [https://github.com/yourusername/tic-tac-toe](https://github.com/sandeepbehera21/Tic-Tac-Toe.git)
+- **Project Link**: (https://github.com/sandeepbehera21/Tic-Tac-Toe.git)
 
 ---
 
