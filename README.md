@@ -9,20 +9,29 @@ A modern, feature-rich Tic-tac-toe game with stunning 90's purple aesthetic, sma
 ## ✨ Features
 
 ### 🎨 **Visual Design**
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 - **90's Purple Color Scheme**: Beautiful gradient background using "Minimal Colors - Purple 90'S" palette
 - **Distinct Player Colors**: Player X (Ice Cold blue) vs Player O (Purple Pain)
 - **Winning Animation**: Special effects for victorious combinations
 - **Responsive Design**: Perfect on desktop, tablet, and mobile
 
 ### 🎵 **Audio Experience**
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 - **Web Audio API**: High-quality programmatically generated sounds
 - **Three Sound Types**: Move (800Hz), Win (1200Hz), Draw (600Hz)
 - **Automatic Initialization**: Works seamlessly across all browsers
 
 ### 🧠 **Game Modes**
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 - **👥 Human vs Human**: Classic two-player gameplay
 - **🤖 Human vs AI**: Smart AI with strategic win/block detection
 - **⏱️ Blitz Mode**: 30-second timer with visual countdown and warnings
@@ -30,16 +39,25 @@ A modern, feature-rich Tic-tac-toe game with stunning 90's purple aesthetic, sma
 ## 🚀 Getting Started
 
 ### Prerequisites
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - No additional software required!
 
 ### Installation
+<<<<<<< HEAD
 
 1. **Clone the repository**
 
    ```bash
    git clone https://github.com/yourusername/tic-tac-toe.git
+=======
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sandeepbehera21/Tic-Tac-Toe.git
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
    cd tic-tac-toe
    ```
 
@@ -57,6 +75,7 @@ A modern, feature-rich Tic-tac-toe game with stunning 90's purple aesthetic, sma
 
 ## 🎨 Color Palette
 
+<<<<<<< HEAD
 | Color Name        | Hex Code  | Usage                                |
 | ----------------- | --------- | ------------------------------------ |
 | **Ice Cold**      | `#A0D2EB` | Player X, Background start           |
@@ -64,11 +83,23 @@ A modern, feature-rich Tic-tac-toe game with stunning 90's purple aesthetic, sma
 | **Medium Purple** | `#D0BDF4` | Background middle, Winning animation |
 | **Purple Pain**   | `#8458B3` | Player O, Background end             |
 | **Heavy Purple**  | `#494D5F` | Player O, Background end             |
+=======
+| Color Name | Hex Code | Usage |
+|------------|----------|-------|
+| **Ice Cold** | `#A0D2EB` | Player X, Background start |
+| **Freeze Purple** | `#E5EAF5` | Background transition |
+| **Medium Purple** | `#D0BDF4` | Background middle, Winning animation |
+| **Purple Pain** | `#8458B3` | Player O, Background end |
+| **Heavy Purple** | `#494D5F` | Player O, Background end |
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 
 ## 🛠️ Technical Details
 
 ### Technologies Used
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 - **HTML5**: Semantic structure and accessibility
 - **CSS3**: Modern styling with gradients, animations, responsive design
 - **JavaScript (ES6+)**: Game logic, AI implementation, audio handling
@@ -76,7 +107,10 @@ A modern, feature-rich Tic-tac-toe game with stunning 90's purple aesthetic, sma
 - **CSS Grid & Flexbox**: Responsive layout system
 
 ### AI Strategy
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 1. **Win Detection**: Looks for winning opportunities
 2. **Block Defense**: Prevents player from winning
 3. **Center Control**: Prioritizes center position
@@ -107,8 +141,12 @@ Contributions welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Contact
 
+<<<<<<< HEAD
 - **Project Link**: [https://github.com/yourusername/tic-tac-toe](https://github.com/yourusername/tic-tac-toe)
 - **Issues**: [https://github.com/yourusername/tic-tac-toe/issues](https://github.com/yourusername/tic-tac-toe/issues)
+=======
+- **Project Link**: (https://github.com/sandeepbehera21/Tic-Tac-Toe.git)
+>>>>>>> bc131963d5f966f6d32716b2353637e7c04de4e9
 
 ---
 
