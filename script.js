@@ -309,6 +309,12 @@ boxes.forEach((box) => {
     
     if (!gameActive || box.innerText !== '') return;
     
+    // Always reset timer on every move if blitz mode is enabled
+    if (blitzMode) {
+      stopTimer();
+      startTimer();
+    }
+    
     // Human player's turn (always X in AI mode)
     if (gameMode === 'ai') {
       // In AI mode, human is always X
@@ -373,6 +379,7 @@ boxes.forEach((box) => {
       } else if (!isWinner) {
         // Start timer for next player if blitz mode is enabled
         if (blitzMode) {
+          stopTimer(); // Stop previous timer before starting a new one
           startTimer();
         }
       }
